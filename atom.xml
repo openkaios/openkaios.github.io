@@ -3,7 +3,7 @@
     <id>http://example.com</id>
     <title>OPENKAIOS</title>
     <link href="http://example.com" />
-    <updated>2021-05-30T13:27:59.248Z</updated>
+    <updated>2021-05-30T13:34:32.686Z</updated>
     <entry>
         <id>http://example.com/2021/05/30/aboutus/</id>
         <title>关于我们</title>
@@ -17,6 +17,6 @@
 &lt;p&gt;“Deploy Hexo workflow”由 &lt;a href=&#34;https://github.com/LiarOnce&#34;&gt;LiarOnce&lt;/a&gt;提供&lt;/p&gt;
 &lt;p&gt;openkaios.top 由&lt;a href=&#34;https://github.com/miangou&#34;&gt;miangou&lt;/a&gt;&lt;/p&gt;
 </content>
-        <updated>2021-05-30T13:27:59.248Z</updated>
+        <updated>2021-05-30T13:34:32.686Z</updated>
     </entry>
 </feed>
