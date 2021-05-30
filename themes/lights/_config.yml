@@ -1,7 +1,7 @@
 menu: #TITLE: link
-#  About: about/
+  About: https://openkaios.top/2021/05/30/aboutus/
 #  Archives: archives/
-  GITHUB: https://github.com/openkaios/
+#  GITHUB: https://github.com/openkaios/
   APP-list: app-list/
 
 profile_link: app-list/ #profile avatar-img link
