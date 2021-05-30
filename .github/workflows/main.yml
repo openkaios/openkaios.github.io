@@ -28,6 +28,11 @@ jobs:
       - name: install dependencies
         run: |
          npm install
+         npm install -g hexo-cli
+         hexo g
+         
+      - name: generate hexo
+        run: 
          hexo g
       
       - name: Deploy 🚀
