@@ -23,4 +23,4 @@ title: 关于我们
 
 "Deploy Hexo workflow"由 [LiarOnce](https://github.com/LiarOnce)提供
 
-openkaios.top 由[miangou](https://github.com/miangou)
+openGiraffes.top 现在由 [LiarOnce](https://github.com/LiarOnce)提供
