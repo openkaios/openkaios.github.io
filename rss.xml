@@ -1,17 +1,17 @@
 <?xml version="1.0"?>
 <rss version="2.0">
     <channel>
-        <title>OPENKAIOS</title>
-        <link>https://openkaios.top</link>
+        <title>openGiraffes</title>
+        <link>https://opengiraffes.top</link>
         <description></description>
         <language>zh-CN</language>
-        <pubDate>Wed, 09 Jun 2021 16:50:26 +0000</pubDate>
-        <lastBuildDate>Wed, 09 Jun 2021 16:50:26 +0000</lastBuildDate>
+        <pubDate>Wed, 07 Jul 2021 16:21:24 +0000</pubDate>
+        <lastBuildDate>Wed, 07 Jul 2021 16:21:24 +0000</lastBuildDate>
         <item>
-            <guid isPermalink="true">https://openkaios.top/2021/06/09/aboutus/</guid>
+            <guid isPermalink="true">https://opengiraffes.top/2021/07/07/aboutus/</guid>
             <title>关于我们</title>
-            <link>https://openkaios.top/2021/06/09/aboutus/</link>
-            <pubDate>Wed, 09 Jun 2021 16:50:26 +0000</pubDate>
+            <link>https://opengiraffes.top/2021/07/07/aboutus/</link>
+            <pubDate>Wed, 07 Jul 2021 16:21:24 +0000</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;ABOUT-US&#34;&gt;&lt;a href=&#34;#ABOUT-US&#34; class=&#34;headerlink&#34; title=&#34;ABOUT US&#34;&gt;&lt;/a&gt;ABOUT US&lt;/h1&gt;&lt;p&gt;目前本项目由4位成员贡献代码&lt;br/&gt;&lt;br&gt;&lt;a href=&#34;https://github.com/zixing131&#34;&gt;zixing&lt;/a&gt;&lt;br/&gt;&lt;br&gt;&lt;a href=&#34;https://github.com/LiarOnce&#34;&gt;LiarOnce&lt;/a&gt;&lt;br/&gt;&lt;br&gt;&lt;a href=&#34;https://github.com/michael-eddy&#34;&gt;Ding&lt;/a&gt;&lt;br/&gt;&lt;br&gt;&lt;a href=&#34;https://github.com/miangou&#34;&gt;miangou&lt;/a&gt;&lt;br/&gt;&lt;br/&gt;&lt;/p&gt;
 &lt;h1 id=&#34;本项目的成立&#34;&gt;&lt;a href=&#34;#本项目的成立&#34; class=&#34;headerlink&#34; title=&#34;本项目的成立&#34;&gt;&lt;/a&gt;本项目的成立&lt;/h1&gt;&lt;p&gt;由KAIOS吧吧群(653164493)  @Light.紫.星 创建&lt;/p&gt;
 &lt;p&gt;初衷为让使用KAIOS的人更加方便&lt;/p&gt;
@@ -19,7 +19,7 @@
 &lt;p&gt;&lt;a href=&#34;https://hexo.io/&#34;&gt;Hexo&lt;/a&gt; &amp;amp; &lt;a href=&#34;https://github.com/F0r3at/Lights&#34;&gt;Lights&lt;/a&gt;驱动&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/F0r3at/Lights&#34;&gt;GITHUB&lt;/a&gt;提供托服务&lt;/p&gt;
 &lt;p&gt;“Deploy Hexo workflow”由 &lt;a href=&#34;https://github.com/LiarOnce&#34;&gt;LiarOnce&lt;/a&gt;提供&lt;/p&gt;
-&lt;p&gt;openkaios.top 由&lt;a href=&#34;https://github.com/miangou&#34;&gt;miangou&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;openGiraffes.top 现在由 &lt;a href=&#34;https://github.com/LiarOnce&#34;&gt;LiarOnce&lt;/a&gt;提供&lt;/p&gt;
  ]]></description>
         </item>
     </channel>
