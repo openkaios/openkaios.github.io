@@ -1,9 +1,9 @@
-$family-serif: "Helvetica Neue", "Helvetica,Arial", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", "Source Han Sans", "Noto Sans", sans-serif;
+$family-sans: "Helvetica Neue", "Helvetica,Arial", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", "Source Han Sans", "Noto Sans", sans-serif;
 $family-mono: "Source Code Pro", monospace, "Microsoft YaHei";
 $border-color: #dbdbdb;
 
 body, button, input, select, textarea {
-    font-family: $family-serif;
+    font-family: $family-sans;
 }
 
 
