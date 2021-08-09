@@ -4,19 +4,17 @@ layout: "about"
 type: page
 ---
 
-目前本项目由4位成员贡献代码<br/>
-[zixing](https://github.com/zixing131)<br/>
-[LiarOnce](https://github.com/LiarOnce)<br/>
-[Ding](https://github.com/michael-eddy)<br/>
-[miangou](https://github.com/miangou)<br/><br/>
+非官方的 KaiOS 应用开发团队。
 
-# 鸣谢
-本站由
+(我们不制作第三方 ROM)
 
-[Hexo](https://hexo.io/) & [Lights](https://github.com/F0r3at/Lights)驱动
+[zixing](https://github.com/zixing131)
 
-[GITHUB](https://github.com/F0r3at/Lights)提供托服务
+[LiarOnce](https://github.com/LiarOnce)
 
-"Deploy Hexo workflow"由 [LiarOnce](https://github.com/LiarOnce)提供
+[Ding](https://github.com/michael-eddy)
 
-openGiraffes.top 现在由 [LiarOnce](https://github.com/LiarOnce)提供
+[Lcsunm](https://github.com/Lcsunm)
+
+[miangou](https://github.com/miangou)
+
