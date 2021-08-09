@@ -4,22 +4,22 @@
       if is_home()
         a.current(href="/")= __('Home')					
       else
-        a(href="/")= __('Home')	
+        a(href="/en/")= __('Home')	
     li
       if is_current('about')
-        a.current(href="/about")= __('About')			
+        a.current(href="/en/about")= __('About')			
       else
-        a(href="/about")= __('About')
+        a(href="/en/about")= __('About')
     li
       if is_archive()
-        a.current(href="/archives")= __('Archive')
+        a.current(href="/en/archives")= __('Archive')
       else
-        a(href="/archives")= __('Archive')
+        a(href="/en/archives")= __('Archive')
     li
       if is_current('links')
-        a.current(href="/links")= __('Links')
+        a.current(href="/en/links")= __('Links')
       else
-        a(href="/links")= __('Links')
+        a(href="/en/links")= __('Links')
     li
       a(href="https://docs.opengiraffes.top")= __('Documentation')
     li
