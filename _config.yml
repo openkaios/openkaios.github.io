@@ -8,9 +8,7 @@ subtitle: 'openGiraffes Group'
 description: 'An unofficial development organization for KaiOS.'
 keywords: kaios,opengiraffes
 author: openGiraffes
-language:
-  - zh-cn
-  - en
+language: [zh-cn, en]
 timezone: ''
 
 # URL
@@ -106,6 +104,10 @@ ignore:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: anatole
+
+i18n:
+  type: [page, post]
+  generator: [index, archive, category, tag]
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
