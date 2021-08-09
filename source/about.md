@@ -1,5 +1,5 @@
 ---
-title: 关于我们
+title: 关于 openGiraffes Group
 ---
 # ABOUT US
 
