@@ -8,7 +8,7 @@ subtitle: 'openGiraffes Group'
 description: 'An unofficial development organization for KaiOS.'
 keywords: kaios,opengiraffes
 author: openGiraffes
-language: zh-CN
+language: zh-cn
 timezone: ''
 
 # URL
@@ -55,6 +55,12 @@ prismjs:
   preprocess: true
   line_number: true
   tab_replace: ''
+
+archive_generator:
+  per_page: 0  
+  yearly: false
+  monthly: false
+  daily: false
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
