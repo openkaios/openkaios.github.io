@@ -8,7 +8,9 @@ subtitle: 'openGiraffes Group'
 description: 'An unofficial development organization for KaiOS.'
 keywords: kaios,opengiraffes
 author: openGiraffes
-language: zh-cn
+language:
+  - zh-cn
+  - en
 timezone: ''
 
 # URL

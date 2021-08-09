@@ -17,13 +17,18 @@
         a(href="/archives")= __('Archive')
     li
       if is_current('links')
-        a.current(href="/links")= __('Links')					
+        a.current(href="/links")= __('Links')
       else
         a(href="/links")= __('Links')
     li
       a(href="https://docs.opengiraffes.top")= __('Documentation')
     li
       a(href="https://store.opengiraffes.top")= 'openGiraffes Store'
+    li
+      if is_current('en')
+        a.current(href="/")= '中文'
+      else
+        a(href="/en")= 'English'
   .information
     .back_btn
       li
