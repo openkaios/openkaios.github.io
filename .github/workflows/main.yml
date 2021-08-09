@@ -34,6 +34,7 @@ jobs:
          hexo g
          cd en
          hexo g
+         mkdir ../public/en
          cp -r ./public/. ../public/en/.
       
       - name: Deploy 🚀
