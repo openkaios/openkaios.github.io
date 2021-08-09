@@ -8,7 +8,7 @@ subtitle: 'openGiraffes Group'
 description: 'An unofficial development organization for KaiOS.'
 keywords: kaios,opengiraffes
 author: openGiraffes
-language: zh-cn
+language: [zh-cn, en]
 timezone: ''
 
 # URL
@@ -56,12 +56,6 @@ prismjs:
   line_number: true
   tab_replace: ''
 
-archive_generator:
-  per_page: 0  
-  yearly: false
-  monthly: false
-  daily: false
-
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
@@ -103,7 +97,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: anatole
+theme: minos
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
