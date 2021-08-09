@@ -25,9 +25,11 @@ article:
 
 # Navigation bar menu links.
 menu:
-  Archives: /archives
-  About: /about
-  Links: /links
+  归档: /archives
+  关于: /about
+  链接: /links
+  文档: https://docs.opengiraffes.top
+  应用商店: https://store.opengiraffes.top
 
 # Search plugin settings.
 search:

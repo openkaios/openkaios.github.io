@@ -25,9 +25,11 @@ article:
 
 # Navigation bar menu links.
 menu:
-  Archives: /archives
-  About: /about
-  Links: /links
+  Archives: /en/archives
+  About: /en/about
+  Links: /en/links
+  Documentation: https://docs.opengiraffes.top
+  App Store: https://store.opengiraffes.top
 
 # Search plugin settings.
 search:
