@@ -27,11 +27,18 @@ jobs:
         run: |
          npm install
          npm install -g hexo-cli
-         npm install --save hexo-render-pug hexo-generator-archive hexo-generator-tag hexo-generator-index hexo-generator-category hexo-generator-i18n
+         npm install --save hexo-render-pug hexo-generator-archive hexo-generator-tag hexo-generator-index hexo-generator-category
+         cd en
+         npm install --save hexo-render-pug hexo-generator-archive hexo-generator-tag hexo-generator-index hexo-generator-category
+         cd ..
          
       - name: generate hexo
-        run: 
+        run: |
          hexo g
+         cd en
+         hexo g
+         mkdir ../public/en
+         cp -r ./public/. ../public/en/.
       
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.7.1
