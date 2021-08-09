@@ -19,7 +19,11 @@
       if is_current('links')
         a.current(href="/links")= __('Links')					
       else
-        a(href="/links")= __('Links')		
+        a(href="/links")= __('Links')
+    li
+      a(href="https://docs.opengiraffes.top")= __('Documentation')
+    li
+      a(href="https://store.opengiraffes.top")= 'openGiraffes Store'
   .information
     .back_btn
       li
