@@ -30,7 +30,7 @@ jobs:
          npm install --save hexo-render-pug hexo-generator-archive hexo-generator-tag hexo-generator-index hexo-generator-category hexo-generator-i18n
          
       - name: generate hexo
-        run: 
+        run: |
          hexo g
          cd en
          hexo g
