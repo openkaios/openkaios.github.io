@@ -2,6 +2,12 @@
 body, button, input, select, textarea {
   font-family: "Helvetica Neue", "Helvetica,Arial", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", "Source Han Sans", "Noto Sans", sans-serif; }
 
+p {
+  text-indent: 2em; }
+
+ol li p {
+  text-indent: 0; }
+
 a.tag.article-tag {
   font-size: 0.9rem;
   text-decoration: none; }
