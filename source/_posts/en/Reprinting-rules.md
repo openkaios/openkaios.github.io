@@ -5,8 +5,6 @@ date: 2021-08-09 22:08:32
 tags: 
 ---
 
-# Reprinting Rules
-
 Please read the following before reprinting: 
 
 <!-- more -->
