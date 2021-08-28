@@ -140,41 +140,17 @@
         <span class="column is-narrow">
             
             
-            7 分钟 读完 (约 982 字)
+            7 分钟 读完 (约 983 字)
         </span>
         
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
         <html><head></head><body><h1 id="诺基亚-8110-4G-EDL-包刷机教程"><a href="#诺基亚-8110-4G-EDL-包刷机教程" class="headerlink" title="诺基亚 8110 4G EDL 包刷机教程"></a>诺基亚 8110 4G EDL 包刷机教程</h1><h2 id="适用范围"><a href="#适用范围" class="headerlink" title="适用范围"></a>适用范围</h2><p>可用于诺基亚 8110 4G 的救砖、扩容、恢复原厂系统。</p>
-<p><strong>注意！！！本教程仅提供 <code>TA-1059</code> 的 EDL 包， <code>TA-1048</code> 在得到该机型的 EDL 包之前不适用。</strong></p>
-<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><ol>
-<li>Windows 7 系统（推荐，且关闭了驱动程序签名验证），Windows 10 可使用以下 Batch 脚本尝试（同样需关闭驱动程序签名验证）</li>
-<li><strong>USB 2.0 接口（必须）</strong> USB 3.0 实测无法成功</li>
-<li>QPST Tool，ADB</li>
-<li>工程线（可选）</li>
-</ol>
-<p>本教程所有资源：</p>
-<figure class="highlight plaintext hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">天翼云盘：</span><br><span class="line">https://cloud.189.cn/t/UnIbum2aimYf (访问码:ozw4)</span><br><span class="line"></span><br><span class="line">如需自行下载其他版本的 QPST Tool 前往：</span><br><span class="line">https://qpsttool.com/</span><br></pre></td></tr></tbody></table></figure>
-
-<h2 id="刷机"><a href="#刷机" class="headerlink" title="刷机"></a>刷机</h2><h3 id="第一步：前期准备"><a href="#第一步：前期准备" class="headerlink" title="第一步：前期准备"></a>第一步：前期准备</h3><p>首先，你需要安装驱动程序，驱动程序安装包名为 <code>Qualcomm USB Driver V1.0.exe</code> ，安装完毕后请重启系统，并在系统启动前按下 F8，选择 <code>禁用驱动程序签名强制</code> (Windows 7)，若为 Windows 10 请在 <code>设置 --&gt; 更新和安全 --&gt; 恢复 --&gt; 高级启动 --&gt; 立即重新启动</code> 后选择 <code>疑难解答 --&gt; 高级选项 --&gt; 启动设置 --&gt; 重启</code>，之后按下 <code>F7 (即禁用驱动程序强制签名)</code>。</p>
-<h3 id="第二步：进入-EDL-模式"><a href="#第二步：进入-EDL-模式" class="headerlink" title="第二步：进入 EDL 模式"></a>第二步：进入 EDL 模式</h3><p>你有两种方式进入 EDL 模式：</p>
-<ol>
-<li><p>将手机彻底关机，最好抠出电池放电大约 10 秒后放回电池，在关机状态下按住上方向键和下方向键后按住开机键，此时开机的 KaiOS logo 会闪一下后黑屏，此时将 USB 线插入电脑，在设备管理器中的 <code>其他设备</code> 显示 <code>QHSUSB_DLOAD</code> 或在 <code>端口 (COM 和 LPT)</code> 显示 <code>Qualcomm HS-USB QDLoader 9008 (COMx)</code>（COMx 不固定，具体以 QFIL 为准）。</p>
-</li>
-<li><p>在开机状态下，启动 USB 调试（在拨号盘上输入 <code>*#*#33284#*#*</code>），显示甲虫图标后接入电脑，输入 <code>adb reboot edl</code>。</p>
-</li>
-<li><p>购买 microUSB 工程线，在关机状态下插入电脑并按下工程线上的按钮，工程线样式如图。<br><img src="https://i.loli.net/2021/08/28/XbxU74GVyjIqNak.jpg" alt="edlcable.jpg"></p>
-</li>
-</ol>
-<h3 id="第三步：安装-QPST-Tool"><a href="#第三步：安装-QPST-Tool" class="headerlink" title="第三步：安装 QPST Tool"></a>第三步：安装 QPST Tool</h3><p>安装 QPST Tool 之前请先安装 <code>Qualcomm USB Driver V1.0.exe</code> 此为高通 USB 驱动。安装完毕后可在设备管理器中看到 <code>Qualcomm HS-USB QDLoader 9008</code> （手机进入 EDL 模式时）。</p>
-<p>驱动安装完毕后即可安装 QPST Tool。</p>
-<h3 id="第四步：刷机"><a href="#第四步：刷机" class="headerlink" title="第四步：刷机"></a>第四步：刷机</h3><p>安装完 QPST Tool 后在开始菜单找到 <code>QPST --&gt; QFIL</code> 打开 QFIL 刷机工具，点击 <code>Select Port</code> 选择 <code>Qualcomm HS-USB QDLoader 9008 (COMx)</code>，在 <code>Select Build Type</code> 中选择 <code>Flat Build</code>，之后解压刷机包，在 <code>Select Programmer</code> 中选择解压后的刷机包内的 <code>prog_emmc_firehose_8909_ddr.mbn</code>后，在 <code>Select Flat Build</code> 下点击 <code>Load XML ...</code> ，会要求你选择两个 XML 文件，先选择刷机包内的 <code>rawprogram0.xml</code> 后选择 <code>patch0.xml</code>。最后点击 <code>Download</code> 即开始刷机。</p>
-<p>刷机过程中最好不要动任何设备，<code>Status</code> 中返回 <code>Waiting for reset done....</code> 且进度条在长时间没有动静后即可拔下数据线，抠掉电池后装回开机。</p>
-<p>若进度条很快走完，请一定要翻看 <code>Status</code> 是否返回有 <code>Download Fail!</code> 等信息，若有请检查驱动和线缆以及接口，一般不推荐在 Windows 10 下进行刷机，因为部分使用 USB2.0 接口的机型在 Windows 10 下有兼容性问题，推荐在 Windows 7 系统下进行刷机，也可尝试云盘内的 <code>fix-usb3.0.bat</code> 脚本（需以管理员权限执行）。 </p>
-<h3 id="第五步：开机"><a href="#第五步：开机" class="headerlink" title="第五步：开机"></a>第五步：开机</h3><p>开机之前需先按住上方向键+开机键，进入 Recovery，选择 <code>Wipe data/factory reset</code> 按返回键确认，恢复出厂设置，选择 <code>Wipe cache</code> 清除 cache 分区。</p>
-<p>最后选择 <code>Reboot system now</code> 后进入系统。</p>
-</body></html>
+<p><strong>注意！！！本教程仅提供 <code>TA-1059</code> 的 EDL 包， <code>TA-1048</code> 在得到该机型的 EDL 包之前不适用。</strong></p></body></html>
+        <p class="article-more-link">
+            <a href="/nokia-8110-4g-edl-flash-tutorial/#more">阅读更多</a>
+        </p>
     
     </div>
     
@@ -202,43 +178,16 @@
         <span class="column is-narrow">
             
             
-            2 分钟 读完 (约 253 字)
+            2 分钟 读完 (约 270 字)
         </span>
         
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <html><head></head><body><ol>
-<li>转载均需标注来源，自制的应用程序需标注作者或团队以及其链接</li>
-<li>由我们自制的应用程序转载需展示实机运行截图，并且拍照运行时的真机图（为防止盗图建议打上水印）</li>
-<li>从 2021-07-25 开始，由我们提供的教程、资源、自制应用程序禁止转载到贴吧（如翻盖手机吧、kaios吧）</li>
-<li>禁止转载未经授权的资源（可转载范围可查看以下表格）</li>
-</ol>
-<table>
-<thead>
-<tr>
-<th align="center">可转载</th>
-<th align="center">不可转载</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">我们团队的自制应用程序（托管于 GitHub 和 QQ 群）</td>
-<td align="center">我们团队的自制应用程序（只在开发群内部使用）</td>
-</tr>
-<tr>
-<td align="center">自编译、自打包的资源</td>
-<td align="center">KaiOS 手机固件（未公开或被厂商要求禁止公开）</td>
-</tr>
-<tr>
-<td align="center">KaiOS 手机固件（可公开的，如诺基亚 8110 4G）</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">我们的原创入门教程（如博客、视频）</td>
-<td align="center"></td>
-</tr>
-</tbody></table>
-</body></html>
+        <html><head></head><body><h1 id="转载规则"><a href="#转载规则" class="headerlink" title="转载规则"></a>转载规则</h1><p>在转载前请先阅读以下内容</p></body></html>
+        <p class="article-more-link">
+            <a href="/Reprinting-rules/#more">阅读更多</a>
+        </p>
     
     </div>
     
