@@ -6,6 +6,13 @@ body, button, input, select, textarea {
     font-family: $family-sans;
 }
 
+p {
+    text-indent: 2em;
+}
+
+ol li p {
+    text-indent: 0;
+}
 
 a.tag.article-tag {
     font-size: 0.9rem;
