@@ -112,7 +112,7 @@ adb reboot
  - 重启进入 recovery
  - 选择 Mount /system
  - 选择 Apply update from SD card
- - 选择 gerda-install-702d409.zip
+ - 选择 gerda-install-221edb8.zip
  - 稍等一会，等待 recovery 菜单重新弹出
  - 选择 Wipe data/factory reset 双清
  - 选择 Wipe cache 清除缓存
