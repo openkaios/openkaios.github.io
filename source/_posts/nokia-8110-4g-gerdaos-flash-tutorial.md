@@ -13,7 +13,9 @@ tags:
 
 他们说：“Install what you want, not they.”意味着你可以最大限度地定制你的香蕉机，而不是受HMD，kaiOS甚至阿三的jio摆布。
 
-目前这个系统处在alpha阶段，可能会有未知的风险。刷机有风险，操作需谨慎。请务必备份好您的所有数据。这会删除您的所有数据。这一操作将导致您失去来自 HMD 官方的 OTA 更新。openGiraffes Group 不对本内容产生的问题承担任何责任。
+**目前这个系统处在alpha阶段，可能会有未知的风险。刷机有风险，操作需谨慎。请务必备份好您的所有数据。这会删除您的所有数据。**
+
+**这一操作将导致您失去来自 HMD 官方的 OTA 更新。openGiraffes Group 不对本内容产生的问题承担任何责任。**
 
 <!-- more -->
 
@@ -29,12 +31,12 @@ tags:
  - 手机固件需要先升级到 V12 以上。
  - 一张 TF 卡。可用空间需至少 5GB。
 
-以下教程均假设你所使用的系统为 Windows 10。
+**注意：本教程以下步骤均假设你所使用的系统为 Windows 10。**
 
 ## 下载所需文件：
 
- - **adb 驱动**
- - **Android SDK Platform Tools** [最新版本下载地址](https://developer.android.google.cn/studio/releases/platform-tools)
+ - **adb 驱动**，macOS 和 Linux 可忽略。
+ - **Android SDK Platform Tools** [最新版本下载地址](https://developer.android.google.cn/studio/releases/platform-tools)，macOS 和 Linux 发行版可通过其对应的包管理器安装，包名为 `android-platform-tools`，Linux 发行版需自行寻找。
  - **recovery_8110.img** Recovery镜像文件，重命名为recovery.img并存放在存储卡根目录下。
  - **gerda-install-221edb8.zip** GerdaOS刷机包。存放在存储卡根目录下。
  - **OneKeyOmniSD** OmniSD一键安装器。
@@ -49,7 +51,7 @@ https://cloud.189.cn/t/jYNNBrnANvui (访问码:tpo4)
 
 ## 安装需要的环境（老手可以跳过）
 
-连上手机，打开 `ADBDriverInstaller.exe` 发现设备后点击 `Install` 即可安装驱动。
+连上手机，在手机拨号盘上输入 `*#*#33284#*#*` 后，打开 `ADBDriverInstaller.exe` 发现设备后点击 `Install` 即可安装驱动。
 
 将 Android SDK Platform Tools 解压到任意的目录（路径最好不要有中文），并编辑环境变量（在 Windows 任务栏上的搜索中或在控制面板搜索 `环境变量` 可以找到），将 `platform-tools` 内的 adb 所在的路径添加到 `Path` 下（用户变量下的可重启 cmd 立即生效，系统变量下的需重启系统后生效）
 
