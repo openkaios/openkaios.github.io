@@ -28,7 +28,7 @@
 <meta property="og:description" content="之前的教程由于年代久远，一些地方有进一步优化的空间，所以重新翻新。 导读GerdaOS 是一个基于诺基亚 8110 4G V13版本制作的第三方 KaiOS ROM，这个ROM支持截屏、文件管理、安装第三方软件、开发者选项、IMEI修改、TTL修改、LTE频段解锁等，并且加入了广告屏蔽等功能。 他们说：“Install what you want, not they.”意味着你可以最大限度地定制你">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-09-27T09:08:01.000Z">
-<meta property="article:modified_time" content="2021-09-27T01:57:52.774Z">
+<meta property="article:modified_time" content="2021-09-30T16:43:24.591Z">
 <meta property="article:author" content="openGiraffes Group">
 <meta property="article:tag" content="kaios,opengiraffes">
 <meta name="twitter:card" content="summary">
@@ -203,7 +203,7 @@
         <span class="column is-narrow">
             
             
-            9 分钟 读完 (约 1419 字)
+            10 分钟 读完 (约 1482 字)
         </span>
         
     </div>
@@ -212,7 +212,8 @@
         <html><head></head><body><p>之前的教程由于年代久远，一些地方有进一步优化的空间，所以重新翻新。</p>
 <h2 id="导读"><a href="#导读" class="headerlink" title="导读"></a>导读</h2><p><a target="_blank" rel="noopener" href="https://gerda.tech/">GerdaOS</a> 是一个基于诺基亚 8110 4G V13版本制作的第三方 KaiOS ROM，这个ROM支持截屏、文件管理、安装第三方软件、开发者选项、IMEI修改、TTL修改、LTE频段解锁等，并且加入了广告屏蔽等功能。</p>
 <p>他们说：“Install what you want, not they.”意味着你可以最大限度地定制你的香蕉机，而不是受HMD，kaiOS甚至阿三的jio摆布。</p>
-<p>目前这个系统处在alpha阶段，可能会有未知的风险。刷机有风险，操作需谨慎。请务必备份好您的所有数据。这会删除您的所有数据。这一操作将导致您失去来自 HMD 官方的 OTA 更新。openGiraffes Group 不对本内容产生的问题承担任何责任。</p>
+<p><strong>目前这个系统处在alpha阶段，可能会有未知的风险。刷机有风险，操作需谨慎。请务必备份好您的所有数据。这会删除您的所有数据。</strong></p>
+<p><strong>这一操作将导致您失去来自 HMD 官方的 OTA 更新。openGiraffes Group 不对本内容产生的问题承担任何责任。</strong></p>
 <span id="more"></span>
 
 <h2 id="已知问题和注意事项"><a href="#已知问题和注意事项" class="headerlink" title="已知问题和注意事项"></a>已知问题和注意事项</h2><ol>
@@ -225,10 +226,10 @@
 <li>手机固件需要先升级到 V12 以上。</li>
 <li>一张 TF 卡。可用空间需至少 5GB。</li>
 </ul>
-<p>以下教程均假设你所使用的系统为 Windows 10。</p>
+<p><strong>注意：本教程以下步骤均假设你所使用的系统为 Windows 10。</strong></p>
 <h2 id="下载所需文件："><a href="#下载所需文件：" class="headerlink" title="下载所需文件："></a>下载所需文件：</h2><ul>
-<li><strong>adb 驱动</strong></li>
-<li><strong>Android SDK Platform Tools</strong> <a target="_blank" rel="noopener" href="https://developer.android.google.cn/studio/releases/platform-tools">最新版本下载地址</a></li>
+<li><strong>adb 驱动</strong>，macOS 和 Linux 可忽略。</li>
+<li><strong>Android SDK Platform Tools</strong> <a target="_blank" rel="noopener" href="https://developer.android.google.cn/studio/releases/platform-tools">最新版本下载地址</a>，macOS 和 Linux 发行版可通过其对应的包管理器安装，包名为 <code>android-platform-tools</code>，Linux 发行版需自行寻找。</li>
 <li><strong>recovery_8110.img</strong> Recovery镜像文件，重命名为recovery.img并存放在存储卡根目录下。</li>
 <li><strong>gerda-install-221edb8.zip</strong> GerdaOS刷机包。存放在存储卡根目录下。</li>
 <li><strong>OneKeyOmniSD</strong> OmniSD一键安装器。</li>
@@ -238,7 +239,7 @@
 <p>除部分可以被直接访问的地址外，所有文件已经以天翼网盘分享链接的形式提供：</p>
 <figure class="highlight plaintext hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://cloud.189.cn/t/jYNNBrnANvui (访问码:tpo4)</span><br></pre></td></tr></tbody></table></figure>
 
-<h2 id="安装需要的环境（老手可以跳过）"><a href="#安装需要的环境（老手可以跳过）" class="headerlink" title="安装需要的环境（老手可以跳过）"></a>安装需要的环境（老手可以跳过）</h2><p>连上手机，打开 <code>ADBDriverInstaller.exe</code> 发现设备后点击 <code>Install</code> 即可安装驱动。</p>
+<h2 id="安装需要的环境（老手可以跳过）"><a href="#安装需要的环境（老手可以跳过）" class="headerlink" title="安装需要的环境（老手可以跳过）"></a>安装需要的环境（老手可以跳过）</h2><p>连上手机，在手机拨号盘上输入 <code>*#*#33284#*#*</code> 后，打开 <code>ADBDriverInstaller.exe</code> 发现设备后点击 <code>Install</code> 即可安装驱动。</p>
 <p>将 Android SDK Platform Tools 解压到任意的目录（路径最好不要有中文），并编辑环境变量（在 Windows 任务栏上的搜索中或在控制面板搜索 <code>环境变量</code> 可以找到），将 <code>platform-tools</code> 内的 adb 所在的路径添加到 <code>Path</code> 下（用户变量下的可重启 cmd 立即生效，系统变量下的需重启系统后生效）</p>
 <h2 id="重置提权"><a href="#重置提权" class="headerlink" title="重置提权"></a>重置提权</h2><p>OneKeyOmniSD支持通过USB一键安装OmniSD程序，安装步骤大大简化。</p>
 <p><strong>在进行下一步操作之前，请确认此操作会删除您手机上的所有数据，请务必提前做好备份。openGiraffes Group 不为此工具的不当使用造成的任何后果承担责任。</strong></p>
@@ -285,7 +286,9 @@
     
     
     <div class="columns is-mobile is-multiline article-nav">
-        <span class="column is-12-mobile is-half-desktop is-hidden-mobile article-nav-prev">
+        <span class="column is-12-mobile is-half-desktop  article-nav-prev">
+            
+            <a href="/install-apps-with-webide-for-kaios2/">使用 WebIDE 安装以及调试第三方应用程序 (KaiOS 2.5.x)</a>
             
         </span>
         <span class="column is-12-mobile is-half-desktop  article-nav-next">

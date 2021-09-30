@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+<head>
+    <meta charset="utf-8">
+<title>使用 WebIDE 安装以及调试第三方应用程序 (KaiOS 2.5.x) - openGiraffes Group</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
+
+
+<link href="/en/install-apps-with-webide-for-kaios2/" rel="alternate" hreflang="en" />
+    
+
+
+<meta name="description" content="An unofficial development organization for KaiOS.">
+
+
+
+<meta name="keywords" content="kaios,opengiraffes">
+
+
+
+    <meta name="description" content="本教程将展示使用 Waterfox Classic 安装为 KaiOS 2.5.x 设计的应用，同时我们也非常推荐使用它来进行安装和调试应用。 考虑到可能有一些用户是需要使用它安装第三方应用，且并无开发知识，我们也会尽量将该教程变得通俗易懂，同时尽力简化操作步骤，并使用图片。 本教程本身不会对手机产生任何损害，但请注意，你必须信任你所安装的应用是安全、无任何威胁的，WebIDE不会验证应用的安全性">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用 WebIDE 安装以及调试第三方应用程序 (KaiOS 2.5.x)">
+<meta property="og:url" content="https://opengiraffes.top/install-apps-with-webide-for-kaios2/index.html">
+<meta property="og:site_name" content="openGiraffes Group">
+<meta property="og:description" content="本教程将展示使用 Waterfox Classic 安装为 KaiOS 2.5.x 设计的应用，同时我们也非常推荐使用它来进行安装和调试应用。 考虑到可能有一些用户是需要使用它安装第三方应用，且并无开发知识，我们也会尽量将该教程变得通俗易懂，同时尽力简化操作步骤，并使用图片。 本教程本身不会对手机产生任何损害，但请注意，你必须信任你所安装的应用是安全、无任何威胁的，WebIDE不会验证应用的安全性">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://liaronce.magecorn.com/img/Snipaste_2021-09-30_22-03-04.png">
+<meta property="og:image" content="https://liaronce.magecorn.com/img/Snipaste_2021-09-30_23-15-10.png">
+<meta property="og:image" content="https://liaronce.magecorn.com/img/Snipaste_2021-09-30_23-35-40.png">
+<meta property="og:image" content="https://liaronce.magecorn.com/img/Snipaste_2021-09-30_23-48-43.png">
+<meta property="og:image" content="https://liaronce.magecorn.com/img/Snipaste_2021-09-30_23-49-51.png">
+<meta property="og:image" content="https://liaronce.magecorn.com/img/Snipaste_2021-10-01_00-00-37.png">
+<meta property="og:image" content="https://liaronce.magecorn.com/img/Snipaste_2021-10-01_00-01-02.png">
+<meta property="og:image" content="https://liaronce.magecorn.com/img/2021-09-30-23-51-53.png">
+<meta property="og:image" content="https://liaronce.magecorn.com/img/Snipaste_2021-10-01_00-02-49.png">
+<meta property="og:image" content="https://liaronce.magecorn.com/img/Snipaste_2021-10-01_00-04-34.png">
+<meta property="og:image" content="https://liaronce.magecorn.com/img/Snipaste_2021-10-01_00-42-14.png">
+<meta property="og:image" content="https://liaronce.magecorn.com/img/Snipaste_2021-10-01_00-17-24.png">
+<meta property="og:image" content="https://liaronce.magecorn.com/img/Snipaste_2021-10-01_00-17-45.png">
+<meta property="og:image" content="https://liaronce.magecorn.com/img/Snipaste_2021-10-01_00-17-52.png">
+<meta property="og:image" content="https://liaronce.magecorn.com/img/Snipaste_2021-10-01_00-23-10.png">
+<meta property="og:image" content="https://liaronce.magecorn.com/img/2021-10-01-00-22-53.png">
+<meta property="og:image" content="https://liaronce.magecorn.com/img/Snipaste_2021-10-01_00-30-44.png">
+<meta property="og:image" content="https://liaronce.magecorn.com/img/Snipaste_2021-10-01_00-29-24.png">
+<meta property="article:published_time" content="2021-09-30T21:48:00.000Z">
+<meta property="article:modified_time" content="2021-09-30T16:43:24.587Z">
+<meta property="article:author" content="openGiraffes Group">
+<meta property="article:tag" content="kaios,opengiraffes">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://liaronce.magecorn.com/img/Snipaste_2021-09-30_22-03-04.png">
+
+
+
+
+
+<link rel="icon" href="/images/favicon.png">
+
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body>
+    
+<nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item navbar-logo" href="/">
+                
+                    
+                    <img src="/images/title-alpha.png" alt="" height="28">
+                    
+                
+            </a>
+            <div class="navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="navbar-menu navbar-start">
+            
+            <a class="navbar-item "
+               href="/archives">归档</a>
+            
+            <a class="navbar-item "
+               href="/about">关于</a>
+            
+            <a class="navbar-item "
+               href="/links">链接</a>
+            
+            <a class="navbar-item "
+               target="_blank" rel="noopener" href="https://docs.opengiraffes.top">文档</a>
+            
+            <a class="navbar-item "
+               target="_blank" rel="noopener" href="https://store.opengiraffes.top">应用商店</a>
+            
+        </div>
+        
+        <div class="navbar-menu navbar-end">
+            
+            <a class="navbar-item search" title="搜索" href="javascript:;">
+                <i class="fas fa-search"></i>
+            </a>
+            
+            
+            <div class="navbar-item is-hoverable has-dropdown is-hidden-mobile is-hidden-tablet-only toc">
+                <a class="navbar-item" title="目录">
+                    <i class="fa fa-list"></i>
+                </a>
+                <div class="navbar-dropdown is-right">
+                    
+                    
+                    
+                    
+                    <a class="navbar-item" href="#前期准备">1&nbsp;&nbsp;<b>前期准备</b></a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#准备开发环境">2&nbsp;&nbsp;<b>准备开发环境</b></a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#准备-WebIDE">3&nbsp;&nbsp;<b>准备 WebIDE</b></a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#准备手机">4&nbsp;&nbsp;<b>准备手机</b></a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#如果无法通过-USB-设备直接连接">4.1&nbsp;&nbsp;如果无法通过 USB 设备直接连接</a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#安装应用">5&nbsp;&nbsp;<b>安装应用</b></a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#进阶：调试应用">6&nbsp;&nbsp;<b>进阶：调试应用</b></a>
+                    
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</nav>
+
+    <section class="section">
+    <div class="container">
+    <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            使用 WebIDE 安装以及调试第三方应用程序 (KaiOS 2.5.x)
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            
+                <time datetime="2021-09-30T21:48:00.000Z" itemprop="datePublished">9月 30 2021</time>
+            
+        </span>
+        
+        
+        <span class="column is-narrow">
+            
+            
+            12 分钟 读完 (约 1823 字)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <html><head></head><body><p>本教程将展示使用 Waterfox Classic 安装为 KaiOS 2.5.x 设计的应用，同时我们也非常推荐使用它来进行安装和调试应用。</p>
+<p>考虑到可能有一些用户是需要使用它安装第三方应用，且并无开发知识，我们也会尽量将该教程变得通俗易懂，同时尽力简化操作步骤，并使用图片。</p>
+<p><strong>本教程本身不会对手机产生任何损害，但请注意，你必须信任你所安装的应用是安全、无任何威胁的，WebIDE不会验证应用的安全性，openGiraffes Group 不对因使用 WebIDE 安装恶意应用程序所产生的问题承担任何责任。</strong></p>
+<span id="more"></span>
+
+<h2 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h2><ul>
+<li>Waterfox Classic 浏览器</li>
+<li>adb 驱动，macOS 和 Linux 可忽略 （可从此处下载：<a target="_blank" rel="noopener" href="https://cloud.189.cn/t/jYNNBrnANvui">https://cloud.189.cn/t/jYNNBrnANvui</a> (访问码:tpo4)，文件名: <code>ADBDriverInstaller.exe</code>）</li>
+<li>Android SDK Platform Tools <a target="_blank" rel="noopener" href="https://developer.android.google.cn/studio/releases/platform-tools">最新版本下载地址</a>，macOS 和 Linux 发行版可通过其对应的包管理器（如 <code>Homebrew</code>(macOS)、<code>Pacman</code>(Arch Linux)、<code>apt</code>(Debian/Ubuntu)、<code>Yum/Dnf</code>(RedHat)）安装，包名为 <code>android-platform-tools</code>，Linux 发行版需自行寻找。</li>
+<li>一部运行 KaiOS 2.5.x 或 Firefox OS 2.x 的手机以及一根 microUSB 数据线</li>
+</ul>
+<p><strong>注意：本教程以下步骤均假设你所使用的系统为 Windows 10。且手机为 HMD 公司所发布的诺基亚 KaiOS 2.5.x 设备：8110 4G (2.5.1)/2720 Flip (2.5.2.1)/800 Tough (2.5.2.1)/6300 4G (2.5.4.1)/8000 4G (2.5.4.1)</strong></p>
+<h2 id="准备开发环境"><a href="#准备开发环境" class="headerlink" title="准备开发环境"></a>准备开发环境</h2><p>连上手机，在手机拨号盘输入 <code>*#*#33284#*#*</code> 后，打开 <code>ADBDriverInstaller.exe</code> 发现设备后点击 <code>Install</code> 即可安装驱动。</p>
+<p>从 <a target="_blank" rel="noopener" href="https://www.waterfox.net/download/">Waterfox 官网</a> 找到 Waterfox Classic，选择你所运行的平台下载安装，截至目前的版本（2021.09）该浏览器的 WebIDE 均保留且可以正常使用，与 Firefox 52.9/59.0 和 Palemoon 28.6.1 相比取消了 WebIDE 难以使用的代码编辑器，同时 ADB Helper 可以正常使用，你可以选择你所喜欢的代码编辑器甚至专业 IDE 来编写应用（如 Visual Studio Code、WebStorm、HBuilder X 等）。</p>
+<p><img src="https://liaronce.magecorn.com/img/Snipaste_2021-09-30_22-03-04.png"></p>
+<p>为了让 Waterfox Classic 的 ADB Helper 可以正常使用，同时为了以后方便通过 cmd 使用，我们推荐将 Android SDK Platform Tools 解压到任意的目录（路径最好不要有中文），并编辑环境变量（在 Windows 任务栏上的搜索中或在控制面板搜索 <code>环境变量</code> 可以找到），将 <code>platform-tools</code> 内的 adb 所在的路径添加到 <code>Path</code> 下（用户变量下的可重启 cmd 立即生效，系统变量下的需重启系统后生效）。</p>
+<p><img src="https://liaronce.magecorn.com/img/Snipaste_2021-09-30_23-15-10.png"></p>
+<p>设置成功后可在 cmd 中确认 adb 是否可被调用，输入 <code>adb version</code>，输出以下内容说明环境变量配置成功：</p>
+<p><img src="https://liaronce.magecorn.com/img/Snipaste_2021-09-30_23-35-40.png"></p>
+<h2 id="准备-WebIDE"><a href="#准备-WebIDE" class="headerlink" title="准备 WebIDE"></a>准备 WebIDE</h2><p>启动 Waterfox Classic，首次启动可能默认语言为英语，可在右上角的汉堡菜单中点击 <code>Options</code>，在 <code>Locale Select</code> 下找到 <code>Chinese Simplified - 中文 (简体)</code> 并按照提示重启浏览器后即可生效。</p>
+<p><img src="https://liaronce.magecorn.com/img/Snipaste_2021-09-30_23-48-43.png"></p>
+<p>同样是在汉堡菜单，点击 <code>开发者</code>，找到 WebIDE，点击后即可进入 WebIDE 界面，你也可以通过快捷键 <code>Shift + F8</code> 快速进入：</p>
+<p><img src="https://liaronce.magecorn.com/img/Snipaste_2021-09-30_23-49-51.png"></p>
+<p>在 WebIDE 窗口下的菜单栏里找到 <code>项目 --&gt; 管理额外组件</code>，安装 <code>ADB Helper 附加组件</code> 和 <code>工具适配器扩展</code>，这两个扩展有可能在启动 WebIDE 后就已经自动安装完毕，需检查。</p>
+<p><img src="https://liaronce.magecorn.com/img/Snipaste_2021-10-01_00-00-37.png"></p>
+<p><img src="https://liaronce.magecorn.com/img/Snipaste_2021-10-01_00-01-02.png"></p>
+<h2 id="准备手机"><a href="#准备手机" class="headerlink" title="准备手机"></a>准备手机</h2><p>确认你的手机进入了 Debug 模式（即手机状态栏有一个背后为 <code>T</code> 的甲虫图标），若无可在拨号盘输入 <code>*#*#33284#*#*</code> 后进入，为保证可以正常连接，请<strong>彻底关闭</strong>任何手机助手以及任何安卓模拟器软件（因为这些软件不同版本的 ADB 会与你所配置的版本冲突）：</p>
+<p><img src="https://liaronce.magecorn.com/img/2021-09-30-23-51-53.png"></p>
+<p>确认手机已经接入电脑，现在你可以在右侧面板的 <code>USB 设备</code> 中找到你的手机，点击后即可连接，注意此时有可能会断连，再次点击即可：</p>
+<p><img src="https://liaronce.magecorn.com/img/Snipaste_2021-10-01_00-02-49.png"></p>
+<p>连接成功后会在右上角此处显示一个蓝色的手机图标和设备名称：</p>
+<p><img src="https://liaronce.magecorn.com/img/Snipaste_2021-10-01_00-04-34.png"></p>
+<h3 id="如果无法通过-USB-设备直接连接"><a href="#如果无法通过-USB-设备直接连接" class="headerlink" title="如果无法通过 USB 设备直接连接"></a>如果无法通过 USB 设备直接连接</h3><p>如果因为系统配置等我们无法预料的原因导致无法在 WebIDE 中通过 <code>USB 设备</code> 直接连接，你可以使用 KaiOS Technologies 公司建议的方式：</p>
+<p>在 cmd 中，输入以下命令：</p>
+<figure class="highlight bash hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb forward tcp:6000 localfilesystem:/data/<span class="hljs-built_in">local</span>/debugger-socket</span><br></pre></td></tr></tbody></table></figure>
+
+<p>此时该命令会返回 TCP 端口 (<code>6000</code>)。</p>
+<p>此时在右侧面板的 <code>其他</code> 选择 <code>远程运行环境</code>，在弹出的窗口输入 <code>localhost:6000</code>，点击确定后即可连接成功，效果等同于直接连接，区别是右上角则会显示 <code>远程运行环境</code>。</p>
+<p><img src="https://liaronce.magecorn.com/img/Snipaste_2021-10-01_00-42-14.png"></p>
+<h2 id="安装应用"><a href="#安装应用" class="headerlink" title="安装应用"></a>安装应用</h2><p>对于在网络上找到的应用程序包（zip 格式的压缩包），请将其解压，若为商店包或为 OmniSD 包（压缩包内有 <code>application.zip</code> 和 <code>metadata.json</code>），请进一步解压 <code>application.zip</code> 直到可以看到 <code>manifest.webapp</code> 文件，这是该应用程序的清单文件。</p>
+<p><img src="https://liaronce.magecorn.com/img/Snipaste_2021-10-01_00-17-24.png"></p>
+<p>在左侧面板点击 <code>打开打包式应用...</code> 双击含有 <code>manifest.webapp</code> 文件的目录，点击 <code>选择文件夹</code> 后即可显示应用程序的基本信息。</p>
+<p>（若上面的运行按钮（即等边三角形图标）可以正常点击，可无视警告，不影响后续安装）：</p>
+<p><img src="https://liaronce.magecorn.com/img/Snipaste_2021-10-01_00-17-45.png"></p>
+<p><img src="https://liaronce.magecorn.com/img/Snipaste_2021-10-01_00-17-52.png"></p>
+<p>点击运行按钮，稍等片刻后会直接在手机上安装并运行该应用程序：</p>
+<p><img src="https://liaronce.magecorn.com/img/Snipaste_2021-10-01_00-23-10.png"></p>
+<p>普通用户在此可以止步，因为此时应用已经安装完毕，并有 <code>下载完成</code> 的推送通知：</p>
+<p><img src="https://liaronce.magecorn.com/img/2021-10-01-00-22-53.png"></p>
+<p><strong>注意：通过 WebIDE 安装的应用程序均不支持自动更新，若有更新请通过以上步骤手动通过 WebIDE 更新</strong></p>
+<h2 id="进阶：调试应用"><a href="#进阶：调试应用" class="headerlink" title="进阶：调试应用"></a>进阶：调试应用</h2><p>若为开发者，以下三个按钮会对调试有所帮助：</p>
+<p><img src="https://liaronce.magecorn.com/img/Snipaste_2021-10-01_00-30-44.png"></p>
+<p>从左至右分别为：刷新应用（安装并运行），停止应用，调试应用</p>
+<p>调试应用即在 WebIDE 底部弹出 Firefox 的开发者工具，你可以在这里对应用进行调试：</p>
+<p><img src="https://liaronce.magecorn.com/img/Snipaste_2021-10-01_00-29-24.png"></p>
+<p><strong>注意：存储选项卡不可用，原因未知，点击后会导致应用崩溃停止，且之后会因为开发者工具会记忆上一次的选项卡，导致无法进行调试</strong></p>
+</body></html>
+    
+    </div>
+    
+    
+    <div class="columns is-mobile is-multiline article-nav">
+        <span class="column is-12-mobile is-half-desktop is-hidden-mobile article-nav-prev">
+            
+        </span>
+        <span class="column is-12-mobile is-half-desktop  article-nav-next">
+            
+            <a href="/nokia-8110-4g-gerdaos-flash-tutorial/">诺基亚 8110 4G GerdaOS 刷机教程</a>
+            
+        </span>
+    </div>
+    
+</article>
+
+
+<div class="sharebox">
+    
+<div class="notification is-danger">
+    You need to set <code>install_url</code> to use ShareThis. Please set it in <code>_config.yml</code>.
+</div>
+
+</div>
+
+
+
+    </div>
+</section>
+    <footer class="footer">
+    <div class="container">
+        <div class="columns content">
+            <div class="column is-narrow has-text-centered">
+                &copy; 2021 openGiraffes Group&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a
+                        target="_blank" rel="noopener" href="http://github.com/ppoffice/hexo-theme-minos">Minos</a>
+            </div>
+            <div class="column is-hidden-mobile"></div>
+
+            
+            <div class="column is-narrow">
+                <div class="columns is-mobile is-multiline is-centered">
+                
+                    
+                <a class="column is-narrow has-text-black" title="GitHub" target="_blank" rel="noopener" href="https://github.com/openGiraffes">
+                    
+                    GitHub
+                    
+                </a>
+                
+                </div>
+            </div>
+            
+            
+<div class="column is-narrow has-text-centered">
+    <div class="dropdown is-up is-right is-hoverable" style="margin-top: -0.2em;">
+        <div class="dropdown-trigger">
+            <button class="button is-small" aria-haspopup="true" aria-controls="dropdown-menu7">
+                <span class="icon">
+                    <i class="fas fa-globe"></i>
+                </span>
+                <span>简体中文</span>
+                <span class="icon is-small">
+            <i class="fas fa-angle-down" aria-hidden="true"></i>
+          </span>
+            </button>
+        </div>
+        <div class="dropdown-menu has-text-left" role="menu">
+            <div class="dropdown-content">
+            
+                <a href="/install-apps-with-webide-for-kaios2/" class="dropdown-item">
+                    简体中文
+                </a>
+            
+                <a href="/en/install-apps-with-webide-for-kaios2/" class="dropdown-item">
+                    English
+                </a>
+            
+            </div>
+        </div>
+    </div>
+</div>
+
+        </div>
+    </div>
+</footer>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+
+<!-- test if the browser is outdated -->
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" target="_blank" rel="noopener" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // plugin function, place inside DOM ready function
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        })
+    });
+</script>
+
+<script>
+    window.FontAwesomeConfig = {
+        searchPseudoElements: true
+    }
+    moment.locale("zh-CN");
+</script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script>
+    MathJax.Hub.Config({
+        "HTML-CSS": {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+</script>
+
+    
+    
+    
+    
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/js/jquery.justifiedGallery.min.js"></script>
+<script>
+    (function ($) {
+        $(document).ready(function () {
+            if (typeof($.fn.lightGallery) === 'function') {
+                $('.article.gallery').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof($.fn.justifiedGallery) === 'function') {
+                $('.justified-gallery').justifiedGallery();
+            }
+        });
+    })(jQuery);
+</script>
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <style>
+        .hljs {
+            position: relative;
+        }
+
+        .hljs .clipboard-btn {
+            float: right;
+            color: #9a9a9a;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .hljs .clipboard-btn:hover {
+          color: #8a8a8a;
+        }
+
+        .hljs > .clipboard-btn {
+            display: none;
+            position: absolute;
+            right: 4px;
+            top: 4px;
+        }
+
+        .hljs:hover > .clipboard-btn {
+            display: inline;
+        }
+
+        .hljs > figcaption > .clipboard-btn {
+            margin-right: 4px;
+        }
+    </style>
+    <script>
+      $(document).ready(function () {
+        $('figure.hljs').each(function(i, figure) {
+          var codeId = 'code-' + i;
+          var code = figure.querySelector('.code');
+          var copyButton = $('<button>Copy <i class="far fa-clipboard"></i></button>');
+          code.id = codeId;
+          copyButton.addClass('clipboard-btn');
+          copyButton.attr('data-clipboard-target-id', codeId);
+
+          var figcaption = figure.querySelector('figcaption');
+
+          if (figcaption) {
+            figcaption.append(copyButton[0]);
+          } else {
+            figure.prepend(copyButton[0]);
+          }
+        })
+
+        var clipboard = new ClipboardJS('.clipboard-btn', {
+          target: function(trigger) {
+            return document.getElementById(trigger.getAttribute('data-clipboard-target-id'));
+          }
+        });
+        clipboard.on('success', function(e) {
+          e.clearSelection();
+        })
+      })
+    </script>
+
+    
+    
+
+    
+
+
+
+<script src="/js/script.js"></script>
+
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-mask"></div>
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="站内搜索" />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '文章',
+                PAGES: '页面',
+                CATEGORIES: '分类',
+                TAGS: '标签',
+                UNTITLED: '(无标题)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+    
+</body>
+</html>
