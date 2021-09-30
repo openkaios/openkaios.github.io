@@ -5,6 +5,9 @@ body, button, input, select, textarea {
 p {
   text-indent: 2em; }
 
+img {
+  display: block !important; }
+
 ol li p {
   text-indent: 0; }
 
