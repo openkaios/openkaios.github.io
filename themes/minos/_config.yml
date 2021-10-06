@@ -2,12 +2,12 @@
 favicon: /images/favicon.png
 
 # Open Graph metadata (https://hexo.io/docs/helpers.html#open-graph)
-open_graph:
-  twitter_id:
-  twitter_site:
-  google_plus:
-  fb_admins:
-  fb_app_id:
+# open_graph:
+#   twitter_id:
+#   twitter_site:
+#   google_plus:
+#   fb_admins:
+#   fb_app_id:
 
 # Website's logo shown on the left of the navigation bar.
 # It can either be an url to an image or a string if the following option is set.
@@ -39,14 +39,14 @@ search:
 toc: true
 
 # Share plugin settings.
-share:
-  type: sharethis
-  install_url:
+# share:
+#   type: sharethis
+#   install_url:
 
 # Comment plugin settings.
-comment:
-  type: 
-  shortname:
+# comment:
+#   type: 
+#   shortname:
 
 # Other plugins and their settings.
 plugins:
