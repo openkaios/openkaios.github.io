@@ -17,7 +17,7 @@ This tutorial will show you how to manually import a new root certificate so tha
 
 ## Preliminary Preparation
 
-**When viewing the content after this tutorial, please make sure your device supports getting ROOT privileges first, if not, please wait for the OEM to provide an OTA update, this tutorial does not apply to devices that cannot be ROOTed. ** 
+**When viewing the content after this tutorial, please make sure your device supports getting ROOT privileges first, if not, please wait for the OEM to provide an OTA update, this tutorial does not apply to devices that cannot be ROOTed.**
 
 1. Use Wallace Toolbox to get temporary ROOT permissions (press 1 on the dialpad), for non-US versions of Nokia 6300 4G and Nokia 8000 4G, see [This tutorial to get permanent ROOT permissions](https://sites.google.com/view/bananahackers/devices/nokia-8000-4g-nokia-6300-4g-2020) (**we do not provide any support for this**)
 
