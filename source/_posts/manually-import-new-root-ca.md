@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 为未获得 OTA 或已被放弃更新的 KaiOS 设备手动导入 Let's Encrypt 新的根证书
+title: 为没有获得 OTA 或已被放弃更新的 KaiOS 设备手动导入 Let's Encrypt 新的根证书
 date: 2021-10-07 21:29 
 tags: 
 ---
