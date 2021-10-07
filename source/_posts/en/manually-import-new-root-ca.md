@@ -13,7 +13,7 @@ This tutorial will show you how to manually import a new root certificate so tha
 
 **This tutorial defaults to you having the required environment and having Wallace Toolbox installed.**
 
-<! -- more -->
+<!-- more -->
 
 ## Preliminary Preparation
 
