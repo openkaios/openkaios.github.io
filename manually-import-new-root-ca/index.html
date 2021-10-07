@@ -2,14 +2,14 @@
 <html class="has-navbar-fixed-top">
 <head>
     <meta charset="utf-8">
-<title>Archives - openGiraffes Group</title>
+<title>为未获得 OTA 或已被放弃更新的 KaiOS 设备手动导入 Let&#39;s Encrypt 新的根证书 - openGiraffes Group</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="referrer" content="no-referrer">
 
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
 
 
-<link href="/archives/index.html" rel="alternate" hreflang="zh-CN" />
+<link href="/en/manually-import-new-root-ca/" rel="alternate" hreflang="en" />
     
 
 
@@ -65,7 +65,7 @@
 <nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
     <div class="container">
         <div class="navbar-brand">
-            <a class="navbar-item navbar-logo" href="/en">
+            <a class="navbar-item navbar-logo" href="/">
                 
                     
                     <img src="/images/title-alpha.png" alt="" height="28">
@@ -81,29 +81,57 @@
         
         <div class="navbar-menu navbar-start">
             
-            <a class="navbar-item is-active"
-               href="/en/archives">Archives</a>
+            <a class="navbar-item "
+               href="/archives">归档</a>
             
             <a class="navbar-item "
-               href="/en/about">About</a>
+               href="/about">关于</a>
             
             <a class="navbar-item "
-               href="/en/links">Links</a>
+               href="/links">链接</a>
             
             <a class="navbar-item "
-               target="_blank" rel="noopener" href="https://docs.opengiraffes.top">Documentation</a>
+               target="_blank" rel="noopener" href="https://docs.opengiraffes.top">文档</a>
             
             <a class="navbar-item "
-               target="_blank" rel="noopener" href="https://store.opengiraffes.top">App Store</a>
+               target="_blank" rel="noopener" href="https://store.opengiraffes.top">应用商店</a>
             
         </div>
         
         <div class="navbar-menu navbar-end">
             
-            <a class="navbar-item search" title="Search" href="javascript:;">
+            <a class="navbar-item search" title="搜索" href="javascript:;">
                 <i class="fas fa-search"></i>
             </a>
             
+            
+            <div class="navbar-item is-hoverable has-dropdown is-hidden-mobile is-hidden-tablet-only toc">
+                <a class="navbar-item" title="目录">
+                    <i class="fa fa-list"></i>
+                </a>
+                <div class="navbar-dropdown is-right">
+                    
+                    
+                    
+                    
+                    <a class="navbar-item" href="#前期准备">1&nbsp;&nbsp;<b>前期准备</b></a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#应用脚本">2&nbsp;&nbsp;<b>应用脚本</b></a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#Windows-Testing">2.1&nbsp;&nbsp;Windows (Testing)</a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#Linux">2.2&nbsp;&nbsp;Linux</a>
+                    
+                </div>
+            </div>
             
             
         </div>
@@ -112,28 +140,73 @@
 
     <section class="section">
     <div class="container">
-    
-    
-        <div class="archive content">
-            <h4 class="title is-4" id="2021">2021</h4>
-            <div class="articles">
+    <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            为未获得 OTA 或已被放弃更新的 KaiOS 设备手动导入 Let&#39;s Encrypt 新的根证书
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
             
-                <div class="article content>">
-                    <time class="is-text-small" datetime="2021-10-07T21:29:00.000Z" itemprop="datePublished">
-                        Oct 7</time>
-                    <h6 class="title is-6"><a href="/en/manually-import-new-root-ca/">为未获得 OTA 或已被放弃更新的 KaiOS 设备手动导入 Let&#39;s Encrypt 新的根证书</a></h6>
-                </div>
+                <time datetime="2021-10-07T21:29:00.000Z" itemprop="datePublished">10月 7 2021</time>
             
-                <div class="article content>">
-                    <time class="is-text-small" datetime="2021-08-09T22:08:32.000Z" itemprop="datePublished">
-                        Aug 9</time>
-                    <h6 class="title is-6"><a href="/en/Reprinting-rules/">Reprinting Rules</a></h6>
-                </div>
+        </span>
+        
+        
+        <span class="column is-narrow">
             
-            </div>
-        </div>
+            
+            5 分钟 读完 (约 695 字)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <html><head></head><body><p>由于 Let’s Encrypt SSL 的旧版根证书 DST Root CA X3 已于 2021 年 9 月 30 日过期，导致大量 KaiOS 设备无法正常使用部署了该证书的服务（浏览网站时会提示 This Connection is Untrusted）</p>
+<p><img src="https://liaronce.magecorn.com/img/20211007202249.png"></p>
+<p>本教程将展示如何手动导入新的根证书令受影响的网站正常访问。</p>
+<p><strong>本教程均默认你拥有所需的环境且已经安装 Wallace Toolbox。</strong></p>
+<span id="more"></span>
+
+<h2 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h2><p><strong>在查看本教程之后的内容时，请先确认你的设备是否支持获取 ROOT 权限，若不能获取 ROOT 权限，请等待 OEM 提供 OTA 更新，本教程不适用于无法 ROOT 的设备。</strong></p>
+<ol>
+<li><p>使用 Wallace Toolbox 获取临时 ROOT 权限（拨号盘按 1），对于非美版的诺基亚 6300 4G 和 8000 4G，请参阅<a target="_blank" rel="noopener" href="https://sites.google.com/view/bananahackers/devices/nokia-8000-4g-nokia-6300-4g-2020">此教程获取永久 ROOT 权限</a>（需自备梯子，<strong>且我们不对此提供任何支持</strong>）</p>
+</li>
+<li><p>拨号盘输入 <code>*#*#33284#*#*</code>，将设备接入到电脑，在终端输入 <code>adb devices</code> 检查是否返回设备。</p>
+</li>
+</ol>
+<h2 id="应用脚本"><a href="#应用脚本" class="headerlink" title="应用脚本"></a>应用脚本</h2><p>访问我们已经修改好的工具包地址：<a target="_blank" rel="noopener" href="https://github.com/openGiraffes/b2g-certificates">https://github.com/openGiraffes/b2g-certificates</a>，下载或使用 <code>git clone</code> 获取它。</p>
+<figure class="highlight bash hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="hljs-built_in">clone</span> https://github.com/openGiraffes/b2g-certificates</span><br><span class="line"><span class="hljs-built_in">cd</span> b2g-certificates</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="Windows-Testing"><a href="#Windows-Testing" class="headerlink" title="Windows (Testing)"></a>Windows (Testing)</h3><p>对于 Windows 用户，我们已经修改并移植好了一个 Batch 脚本，且准备好了大部分所需的环境，直接下载解压即可，但我们并未将 ADB 包含到工具包，请自行安装 ADB 驱动且自备 Android Platform Tools，安装驱动以及设置环境变量可参考<a href="https://opengiraffes.top/install-apps-with-webide-for-kaios2">此教程</a>。</p>
+<p>获取到工具包后双击 <code>add-certificates-to-phone.bat</code> 即可将证书导入到手机，执行后手机将会重启，之后可尝试访问使用 Let’s Encrypt SSL 的网站和应用。</p>
+<p>由于我们仅仅只是粗略的进行移植，可能会出现问题，若有问题可在此处反馈：<a target="_blank" rel="noopener" href="https://github.com/openGiraffes/b2g-certificates/issues">https://github.com/openGiraffes/b2g-certificates/issues</a></p>
+<h3 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h3><p>对于 Linux 用户，请按需执行以下命令：</p>
+<figure class="highlight bash hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment"># Debian/Ubuntu</span></span><br><span class="line">sudo apt-get install libnss3-tools adb wget</span><br><span class="line"><span class="hljs-comment"># RHEL/CentOS/Fedora</span></span><br><span class="line">sudo dnf install nss-tools wget <span class="hljs-comment">#adb 需自行安装</span></span><br><span class="line"><span class="hljs-comment"># ArchLinux</span></span><br><span class="line">sudo pacman -S nss android-tools wget</span><br><span class="line"></span><br><span class="line">chmod +x ./add-certificates-to-phone.sh</span><br><span class="line">./add-certificates-to-phone.sh</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># Windows Subsystem for Linux (WSL)</span></span><br><span class="line">chmod +x ./add-certificates-to-phone-wsl.sh</span><br><span class="line">./add-certificates-to-phone-wsl.sh</span><br></pre></td></tr></tbody></table></figure>
+
+<p><strong>注意：对于使用 WSL 的用户，请确保 Android Platform Tools （Windows 版本）已加入到环境变量 <code>Path</code> 中，原因是目前的版本无法令 WSL 访问设备</strong></p>
+</body></html>
+    
+    </div>
     
     
+    <div class="columns is-mobile is-multiline article-nav">
+        <span class="column is-12-mobile is-half-desktop is-hidden-mobile article-nav-prev">
+            
+        </span>
+        <span class="column is-12-mobile is-half-desktop  article-nav-next">
+            
+            <a href="/install-apps-with-webide-for-kaios2/">使用 WebIDE 安装以及调试第三方应用程序 (KaiOS 2.5.x)</a>
+            
+        </span>
+    </div>
+    
+</article>
+
+
+
+
     </div>
 </section>
     <footer class="footer">
@@ -168,7 +241,7 @@
                 <span class="icon">
                     <i class="fas fa-globe"></i>
                 </span>
-                <span>English</span>
+                <span>简体中文</span>
                 <span class="icon is-small">
             <i class="fas fa-angle-down" aria-hidden="true"></i>
           </span>
@@ -177,11 +250,11 @@
         <div class="dropdown-menu has-text-left" role="menu">
             <div class="dropdown-content">
             
-                <a href="/archives/index.html" class="dropdown-item">
+                <a href="/manually-import-new-root-ca/" class="dropdown-item">
                     简体中文
                 </a>
             
-                <a href="/en/archives/index.html" class="dropdown-item">
+                <a href="/en/manually-import-new-root-ca/" class="dropdown-item">
                     English
                 </a>
             
@@ -218,7 +291,7 @@
     window.FontAwesomeConfig = {
         searchPseudoElements: true
     }
-    moment.locale("en-AU");
+    moment.locale("zh-CN");
 </script>
 
 
@@ -344,7 +417,7 @@
     <div class="searchbox-mask"></div>
     <div class="searchbox-container ins-search-container">
         <div class="searchbox-input-wrapper">
-            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something..." />
+            <input type="text" class="searchbox-input ins-search-input" placeholder="站内搜索" />
             <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="searchbox-result-wrapper ins-section-wrapper">
@@ -356,13 +429,13 @@
     (function (window) {
         var INSIGHT_CONFIG = {
             TRANSLATION: {
-                POSTS: 'Posts',
-                PAGES: 'Pages',
-                CATEGORIES: 'Categories',
-                TAGS: 'Tags',
-                UNTITLED: '(Untitled)',
+                POSTS: '文章',
+                PAGES: '页面',
+                CATEGORIES: '分类',
+                TAGS: '标签',
+                UNTITLED: '(无标题)',
             },
-            CONTENT_URL: '/content.en.json',
+            CONTENT_URL: '/content.json',
         };
         window.INSIGHT_CONFIG = INSIGHT_CONFIG;
     })(window);

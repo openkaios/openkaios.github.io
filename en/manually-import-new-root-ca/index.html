@@ -2,14 +2,14 @@
 <html class="has-navbar-fixed-top">
 <head>
     <meta charset="utf-8">
-<title>Archives - openGiraffes Group</title>
+<title>为未获得 OTA 或已被放弃更新的 KaiOS 设备手动导入 Let&#39;s Encrypt 新的根证书 - openGiraffes Group</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="referrer" content="no-referrer">
 
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
 
 
-<link href="/archives/index.html" rel="alternate" hreflang="zh-CN" />
+<link href="/manually-import-new-root-ca/" rel="alternate" hreflang="zh-CN" />
     
 
 
@@ -81,7 +81,7 @@
         
         <div class="navbar-menu navbar-start">
             
-            <a class="navbar-item is-active"
+            <a class="navbar-item "
                href="/en/archives">Archives</a>
             
             <a class="navbar-item "
@@ -105,6 +105,34 @@
             </a>
             
             
+            <div class="navbar-item is-hoverable has-dropdown is-hidden-mobile is-hidden-tablet-only toc">
+                <a class="navbar-item" title="Table of Contents">
+                    <i class="fa fa-list"></i>
+                </a>
+                <div class="navbar-dropdown is-right">
+                    
+                    
+                    
+                    
+                    <a class="navbar-item" href="#Preliminary-Preparation">1&nbsp;&nbsp;<b>Preliminary Preparation</b></a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#Applicate-Script">2&nbsp;&nbsp;<b>Applicate Script</b></a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#Windows-Testing">2.1&nbsp;&nbsp;Windows (Testing)</a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#Linux">2.2&nbsp;&nbsp;Linux</a>
+                    
+                </div>
+            </div>
+            
             
         </div>
     </div>
@@ -112,28 +140,72 @@
 
     <section class="section">
     <div class="container">
-    
-    
-        <div class="archive content">
-            <h4 class="title is-4" id="2021">2021</h4>
-            <div class="articles">
+    <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            为未获得 OTA 或已被放弃更新的 KaiOS 设备手动导入 Let&#39;s Encrypt 新的根证书
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
             
-                <div class="article content>">
-                    <time class="is-text-small" datetime="2021-10-07T21:29:00.000Z" itemprop="datePublished">
-                        Oct 7</time>
-                    <h6 class="title is-6"><a href="/en/manually-import-new-root-ca/">为未获得 OTA 或已被放弃更新的 KaiOS 设备手动导入 Let&#39;s Encrypt 新的根证书</a></h6>
-                </div>
+                <time datetime="2021-10-07T21:29:00.000Z" itemprop="datePublished">Oct 7 2021</time>
             
-                <div class="article content>">
-                    <time class="is-text-small" datetime="2021-08-09T22:08:32.000Z" itemprop="datePublished">
-                        Aug 9</time>
-                    <h6 class="title is-6"><a href="/en/Reprinting-rules/">Reprinting Rules</a></h6>
-                </div>
+        </span>
+        
+        
+        <span class="column is-narrow">
             
-            </div>
-        </div>
+            
+            3 minutes read (About 499 words)
+        </span>
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <html><head></head><body><p>Due to the expiration of Let’s Encrypt SSL’s old root certificate DST Root CA X3 on September 30, 2021, a large number of KaiOS devices are unable to use the service with this certificate deployed (browsing the website will prompt This Connection is Untrusted)</p>
+<p><img src="https://liaronce.magecorn.com/img/20211007202249.png"></p>
+<p>This tutorial will show you how to manually import a new root certificate so that the affected websites can be accessed properly.</p>
+<p><strong>This tutorial defaults to you having the required environment and having Wallace Toolbox installed.</strong></p>
+<p>&lt;! – more –&gt;</p>
+<h2 id="Preliminary-Preparation"><a href="#Preliminary-Preparation" class="headerlink" title="Preliminary Preparation"></a>Preliminary Preparation</h2><p>**When viewing the content after this tutorial, please make sure your device supports getting ROOT privileges first, if not, please wait for the OEM to provide an OTA update, this tutorial does not apply to devices that cannot be ROOTed. ** </p>
+<ol>
+<li><p>Use Wallace Toolbox to get temporary ROOT permissions (press 1 on the dialpad), for non-US versions of Nokia 6300 4G and Nokia 8000 4G, see <a target="_blank" rel="noopener" href="https://sites.google.com/view/bananahackers/devices/nokia-8000-4g-nokia-6300-4g-2020">This tutorial to get permanent ROOT permissions</a> (<strong>we do not provide any support for this</strong>)</p>
+</li>
+<li><p>Input <code>*#*#33284#*#*</code> on keypad(For Nokia), plug the device into your computer and type <code>adb devices</code> in terminal to check if the device is returned.</p>
+</li>
+</ol>
+<h2 id="Applicate-Script"><a href="#Applicate-Script" class="headerlink" title="Applicate Script"></a>Applicate Script</h2><p>Visit our modified toolkit address: <a target="_blank" rel="noopener" href="https://github.com/openGiraffes/b2g-certificates">https://github.com/openGiraffes/b2g-certificates</a> and download or use <code>git clone</code> to get it.</p>
+<figure class="highlight bash hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="hljs-built_in">clone</span> https://github.com/openGiraffes/b2g-certificates</span><br><span class="line"><span class="hljs-built_in">cd</span> b2g-certificates</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="Windows-Testing"><a href="#Windows-Testing" class="headerlink" title="Windows (Testing)"></a>Windows (Testing)</h3><p>For Windows users, we have modified and ported a Batch script and prepared most of the required environment, just download and unzip it, but we have not included ADB in the toolkit, please install the ADB driver and provide your own Android Platform Tools, install the driver and set the environment variables as described in <a target="_blank" rel="noopener" href="https://sites.google.com/view/bananahackers/install-omnisd">this tutorial</a>.</p>
+<p>Once you have the toolkit, double click <code>add-certificates-to-phone.bat</code> to import the certificate to your phone, the phone will reboot after execution and you can try to access websites and applications that use Let’s Encrypt SSL.</p>
+<p>Since we are only doing a rough port, there may be problems, if you have any, you can give feedback here: <a target="_blank" rel="noopener" href="https://github.com/openGiraffes/b2g-certificates/issues">https://github.com/openGiraffes/b2g-certificates/issues</a></p>
+<h3 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h3><p>For Linux users, execute the following commands as needed.</p>
+<figure class="highlight bash hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment"># Debian/Ubuntu</span></span><br><span class="line">sudo apt-get install libnss3-tools adb wget</span><br><span class="line"><span class="hljs-comment"># RHEL/CentOS/Fedora</span></span><br><span class="line">sudo dnf install nss-tools wget <span class="hljs-comment">#adb needs to be installed by yourself</span></span><br><span class="line"><span class="hljs-comment"># ArchLinux</span></span><br><span class="line">sudo pacman -S nss android-tools wget</span><br><span class="line"></span><br><span class="line">chmod +x ./add-certificates-to-phone.sh</span><br><span class="line">./add-certificates-to-phone.sh</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># Windows Subsystem for Linux (WSL)</span></span><br><span class="line">chmod +x ./add-certificates-to-phone-wsl.sh</span><br><span class="line">./add-certificates-to-phone-wsl.sh</span><br></pre></td></tr></tbody></table></figure>
+
+<p><strong>Note: For users using WSL, please make sure that Android Platform Tools (Windows version) is added to the environment variable <code>Path</code>, as the current version does not allow WSL to access the device</strong></p>
+</body></html>
+    
+    </div>
     
     
+    <div class="columns is-mobile is-multiline article-nav">
+        <span class="column is-12-mobile is-half-desktop is-hidden-mobile article-nav-prev">
+            
+        </span>
+        <span class="column is-12-mobile is-half-desktop  article-nav-next">
+            
+            <a href="/en/Reprinting-rules/">Reprinting Rules</a>
+            
+        </span>
+    </div>
+    
+</article>
+
+
+
+
     </div>
 </section>
     <footer class="footer">
@@ -177,11 +249,11 @@
         <div class="dropdown-menu has-text-left" role="menu">
             <div class="dropdown-content">
             
-                <a href="/archives/index.html" class="dropdown-item">
+                <a href="/manually-import-new-root-ca/" class="dropdown-item">
                     简体中文
                 </a>
             
-                <a href="/en/archives/index.html" class="dropdown-item">
+                <a href="/en/manually-import-new-root-ca/" class="dropdown-item">
                     English
                 </a>
             
