@@ -36,7 +36,7 @@ cd b2g-certificates
 
 对于 Windows 用户，我们已经修改并移植好了一个 Batch 脚本，且准备好了大部分所需的环境，直接下载解压即可，但我们并未将 ADB 包含到工具包，请自行安装 ADB 驱动且自备 Android Platform Tools，安装驱动以及设置环境变量可参考[此教程](https://opengiraffes.top/install-apps-with-webide-for-kaios2)。
 
-获取到工具包后双击 `add-certificates-to-phone.bat` 即可将证书导入到手机，执行后手机将会重启，之后可尝试访问使用 Let's Encrypt SSL 的网站和应用。
+获取到工具包后双击 `add-certificates-to-phone.bat` 然后按照提示输入路径（例如对于诺基亚手机用户，输入 `/data/b2g/mozilla`)，即可将证书导入到手机，执行后手机将会重启，之后可尝试访问使用 Let's Encrypt SSL 的网站和应用。
 
 由于我们仅仅只是粗略的进行移植，可能会出现问题，若有问题可在此处反馈：[https://github.com/openGiraffes/b2g-certificates/issues](https://github.com/openGiraffes/b2g-certificates/issues)
 
@@ -53,11 +53,11 @@ sudo dnf install nss-tools wget #adb 需自行安装
 sudo pacman -S nss android-tools wget
 
 chmod +x ./add-certificates-to-phone.sh
-./add-certificates-to-phone.sh
+./add-certificates-to-phone.sh  -d # 对诺基亚用户
 
 # Windows Subsystem for Linux (WSL)
 chmod +x ./add-certificates-to-phone-wsl.sh
-./add-certificates-to-phone-wsl.sh
+./add-certificates-to-phone-wsl.sh -d # 对诺基亚用户
 ```
 
 **注意：对于使用 WSL 的用户，请确保 Android Platform Tools （Windows 版本）已加入到环境变量 `Path` 中，原因是目前的版本无法令 WSL 访问设备**
