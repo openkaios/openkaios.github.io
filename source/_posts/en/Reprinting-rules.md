@@ -9,10 +9,10 @@ Please read the following before reprinting:
 
 <!-- more -->
 
-1. All reprints must be marked with the source, and self-made applications must be marked with the author or team and their link
-2. Reprinted by our self-made application, we need to show screenshots of the real machine running, and take pictures of the real machine when it is running (watermark is recommended to prevent theft of pictures)
-3. Starting from 2021-07-25, the tutorials, resources, and self-made applications provided by us are prohibited from being reposted to Baidu Tieba（e.g. 翻盖手机吧、kaios吧）
-4. Reprinting of unauthorized resources is prohibited (see the table below for the scope of reprinting)
+1. All reprints must be marked with the source, and self-made applications must be marked with the author or team and their link  
+2. Reprinted by our self-made application, we need to show screenshots of the real machine running, and take pictures of the real machine when it is running (watermark is recommended to prevent theft of pictures)  
+3. Starting from 2021-07-25, the tutorials, resources, and self-made applications provided by us are prohibited from being reposted to Baidu Tieba（e.g. 翻盖手机吧、kaios吧）. From 2021-11-06, reprinting to QQ group(814458036) is prohibited.  
+4. Reprinting of unauthorized resources is prohibited (see the table below for the scope of reprinting)  
 
 |                            Accept                            |                            Reject                            |
 | :----------------------------------------------------------: | :----------------------------------------------------------: |
