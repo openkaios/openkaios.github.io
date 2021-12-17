@@ -49,7 +49,7 @@ You have three ways to enter EDL mode.
 
 2. In the boot state, start USB debugging (enter ` *#*#33284#*#*` on the keypad), plug in the computer after the debug icon is displayed, and enter `adb reboot edl`.
 
-3. Purchase the microUSB engineering cable, plug it into the computer in the off state and press the button on it, the engineering cable style is as shown.   
+3. Purchase the microUSB EDL cable, plug it into the computer in the off state and press the button on it, the EDL cable style is as shown.   
 ![edlcable.jpg](https://i.loli.net/2021/08/28/XbxU74GVyjIqNak.jpg)
 
 ### Step 3: Install QPST Tool

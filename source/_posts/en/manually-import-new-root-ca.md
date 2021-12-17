@@ -46,7 +46,7 @@ For Linux users, execute the following commands as needed.
 
 ```bash
 # Debian/Ubuntu
-sudo apt-get install libnss3-tools adb wget
+sudo apt install libnss3-tools adb wget
 # RHEL/CentOS/Fedora
 sudo dnf install nss-tools wget #adb needs to be installed by yourself
 # ArchLinux

@@ -46,7 +46,7 @@ cd b2g-certificates
 
 ```bash
 # Debian/Ubuntu
-sudo apt-get install libnss3-tools adb wget
+sudo apt install libnss3-tools adb wget
 # RHEL/CentOS/Fedora
 sudo dnf install nss-tools wget #adb 需自行安装
 # ArchLinux
