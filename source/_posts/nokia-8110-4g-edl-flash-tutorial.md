@@ -41,7 +41,7 @@ https://qpsttool.com/
 
 ### 第二步：进入 EDL 模式
 
-你有两种方式进入 EDL 模式：
+你有三种方式进入 EDL 模式：
 
 1. 将手机彻底关机，最好抠出电池放电大约 10 秒后放回电池，在关机状态下按住上方向键和下方向键后按住开机键，此时开机的 KaiOS logo 会闪一下后黑屏，此时将 USB 线插入电脑，在设备管理器中的 `其他设备` 显示 `QHSUSB_DLOAD` 或在 `端口 (COM 和 LPT)` 显示 `Qualcomm HS-USB QDLoader 9008 (COMx)`（COMx 不固定，具体以 QFIL 为准）。
 
