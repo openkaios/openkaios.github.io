@@ -26,6 +26,9 @@ tags:
 天翼云盘：
 https://cloud.189.cn/t/UnIbum2aimYf (访问码:ozw4)
 
+OneDrive:
+https://1drv.ms/u/s!AhQuwVw05ZG7gYxemzvjKV_1aQmetg?e=6kse2t
+
 如需自行下载其他版本的 QPST Tool 前往：
 https://qpsttool.com/
 ```
