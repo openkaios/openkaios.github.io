@@ -39,7 +39,9 @@ https://qpsttool.com/
 
 ### Step 1: Preparation
 
-First, you need to install the driver, the driver installation package named `Qualcomm USB Driver V1.0.exe`, after installation, please reboot your system and press F8 before the system boots, select `Disable driver signature enforcement` (Windows 7), for Windows 10 please select `Settings --> Update and Security --> Restore --> Advanced Startup --> Reboot Now` and select `Troubleshooting --> Advanced Options --> Startup Settings --> Reboot`, then press `F7 (i.e. Disable driver signature enforcement)`.
+First, you need to install the driver, the driver installation package named `Qualcomm USB Driver V1.0.exe`, after installation, please reboot your system and press F8 before the system boots, select `Disable driver signature enforcement` (Windows 7).
+
+For Windows 10 please select `Settings --> Update and Security --> Restore --> Advanced Startup --> Reboot Now` and select `Troubleshooting --> Advanced Options --> Startup Settings --> Reboot`, then press `F7 (i.e. Disable driver signature enforcement)`.
 
 ### Step 2: Enter EDL mode
 
