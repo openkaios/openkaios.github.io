@@ -5,11 +5,13 @@ date: 2021-12-17 10:29:01
 tags: 
 ---
 
+ > 2022-01-07: Fixed some syntax issues to make it easier to read
+
 ## Scope of application
 
 It can be used to rescue, expand, and restore the original system of Nokia 8110 4G.
 
-**Note!!! This tutorial only provides the EDL package for `TA-1059`, `TA-1048` is not applicable until you get the EDL package for this model.  **
+**Note!!! This tutorial only provides the EDL package for `TA-1059`, `TA-1048` is not applicable until you get the EDL package for this model.**
 
 <!-- more -->
 
@@ -66,7 +68,7 @@ After installing QPST Tool, find `QPST --> QFIL` in the start menu to open the `
 
 Finally, click `Download` to start flashing.
 
-It is better not to move any device during the flashing process, the `Status` will return `Waiting for reset done.... ` and the progress bar does not move for a long time, you can unplug the data cable, key off the battery and then install it back on.
+It is better not to move any device during the flashing process, the `Status` will return `Waiting for reset done.... ` and the progress bar does not move for a long time, you can unplug the USB cable, take out the battery and then install it back on.
 
 If the progress bar is finished soon, please check `Status` to see if there is `Download Fail!` information, if there is, please check the driver and cable and interface.
 
