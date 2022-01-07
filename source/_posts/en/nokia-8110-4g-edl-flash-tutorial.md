@@ -20,7 +20,7 @@ It can be used to rescue, expand, and restore the original system of Nokia 8110 
 1. Windows 7 (recommended, with driver signature verification turned off).
     Windows 10 can be tried using the following Batch script (also with driver signature verification turned off)
 
-2. **USB 2.0 interface (required)  ** USB 3.0 tested unsuccessful
+2. **USB 2.0 interface (required)** USB 3.0 tested unsuccessful
 3. QPST Tool, ADB
 4. Engineering Cable (optional)
 
