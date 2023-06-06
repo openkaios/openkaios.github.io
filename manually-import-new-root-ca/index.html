@@ -59,7 +59,7 @@
     
 
 
-<meta name="generator" content="Hexo 5.4.0"></head>
+<meta name="generator" content="Hexo 5.4.2"></head>
 <body>
     
 <nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
@@ -85,10 +85,10 @@
                href="/archives">归档</a>
             
             <a class="navbar-item "
-               href="/about">关于</a>
+               href="/about.html">关于</a>
             
             <a class="navbar-item "
-               href="/links">链接</a>
+               href="/links.html">链接</a>
             
             <a class="navbar-item "
                target="_blank" rel="noopener" href="https://docs.opengiraffes.top">文档</a>
@@ -97,7 +97,7 @@
                target="_blank" rel="noopener" href="https://store.opengiraffes.top">应用商店</a>
             
             <a class="navbar-item "
-               href="/chat">交流群</a>
+               href="/chat.html">交流群</a>
             
         </div>
         
@@ -186,7 +186,7 @@
 <p>获取到工具包后双击 <code>add-certificates-to-phone.bat</code> 然后按照提示输入路径（例如对于诺基亚手机用户，输入 <code>/data/b2g/mozilla</code>)，即可将证书导入到手机，执行后手机将会重启，之后可尝试访问使用 Let’s Encrypt SSL 的网站和应用。</p>
 <p>由于我们仅仅只是粗略的进行移植，可能会出现问题，若有问题可在此处反馈：<a target="_blank" rel="noopener" href="https://github.com/openGiraffes/b2g-certificates/issues">https://github.com/openGiraffes/b2g-certificates/issues</a></p>
 <h3 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h3><p>对于 Linux 用户，请按需执行以下命令：</p>
-<figure class="highlight bash hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment"># Debian/Ubuntu</span></span><br><span class="line">sudo apt install libnss3-tools adb wget</span><br><span class="line"><span class="hljs-comment"># RHEL/CentOS/Fedora</span></span><br><span class="line">sudo dnf install nss-tools wget <span class="hljs-comment">#adb 需自行安装</span></span><br><span class="line"><span class="hljs-comment"># ArchLinux</span></span><br><span class="line">sudo pacman -S nss android-tools wget</span><br><span class="line"></span><br><span class="line">chmod +x ./add-certificates-to-phone.sh</span><br><span class="line">./add-certificates-to-phone.sh  -d <span class="hljs-comment"># 对诺基亚用户</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># Windows Subsystem for Linux (WSL)</span></span><br><span class="line">chmod +x ./add-certificates-to-phone-wsl.sh</span><br><span class="line">./add-certificates-to-phone-wsl.sh -d <span class="hljs-comment"># 对诺基亚用户</span></span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight bash hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment"># Debian/Ubuntu</span></span><br><span class="line">sudo apt install libnss3-tools adb wget</span><br><span class="line"><span class="hljs-comment"># RHEL/CentOS/Fedora</span></span><br><span class="line">sudo dnf install nss-tools wget <span class="hljs-comment">#adb 需自行安装</span></span><br><span class="line"><span class="hljs-comment"># ArchLinux</span></span><br><span class="line">sudo pacman -S nss android-tools wget</span><br><span class="line"></span><br><span class="line"><span class="hljs-built_in">chmod</span> +x ./add-certificates-to-phone.sh</span><br><span class="line">./add-certificates-to-phone.sh  -d <span class="hljs-comment"># 对诺基亚用户</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># Windows Subsystem for Linux (WSL)</span></span><br><span class="line"><span class="hljs-built_in">chmod</span> +x ./add-certificates-to-phone-wsl.sh</span><br><span class="line">./add-certificates-to-phone-wsl.sh -d <span class="hljs-comment"># 对诺基亚用户</span></span><br></pre></td></tr></tbody></table></figure>
 
 <p><strong>注意：对于使用 WSL 的用户，请确保 Android Platform Tools （Windows 版本）已加入到环境变量 <code>Path</code> 中，原因是目前的版本无法令 WSL 访问设备</strong></p>
 </body></html>
@@ -216,7 +216,7 @@
     <div class="container">
         <div class="columns content">
             <div class="column is-narrow has-text-centered">
-                &copy; 2022 openGiraffes Group&nbsp;
+                &copy; 2023 openGiraffes Group&nbsp;
                 Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a
                         target="_blank" rel="noopener" href="http://github.com/ppoffice/hexo-theme-minos">Minos</a>
             </div>
