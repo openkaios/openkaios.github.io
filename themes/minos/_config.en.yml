@@ -1,8 +1,8 @@
 # Navigation bar menu links.
 menu:
   Archives: /en/archives
-  About: /en/about
-  Links: /en/links
+  About: /en/about.html
+  Links: /en/links.html
   Documentation: https://docs.opengiraffes.top
   App Store: https://store.opengiraffes.top
-  Chatroom: /chat
+  Chatroom: /chat.html
