@@ -1,22 +1,11 @@
-$family-sans: "Helvetica Neue", "Helvetica,Arial", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", "Source Han Sans", "Noto Sans", sans-serif;
+$family-serif: "Ovo", "Georgia", "STZhongsong", "Microsoft YaHei", serif;
 $family-mono: "Source Code Pro", monospace, "Microsoft YaHei";
 $border-color: #dbdbdb;
 
 body, button, input, select, textarea {
-    font-family: $family-sans;
+    font-family: $family-serif;
 }
 
-p {
-    text-indent: 2em;
-}
-
-img {
-    display: block !important;
-}
-
-ol li p {
-    text-indent: 0;
-}
 
 a.tag.article-tag {
     font-size: 0.9rem;

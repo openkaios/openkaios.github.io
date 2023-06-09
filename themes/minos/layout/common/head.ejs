@@ -1,9 +1,8 @@
 <meta charset="utf-8">
 <title><%= page_title() %></title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="referrer" content="no-referrer">
 
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
 
 <% const languages = display_languages();
 const pageLanguage = page_language(page);
@@ -42,14 +41,14 @@ if (languages.length > 1) {
 <% } %>
 
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bulma@0.6.2/css/bulma.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
 
 <% if (!(has_config('plugins.gallery') && get_config('plugins.gallery') === false)) { %>
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/justifiedGallery@3.6.5/dist/css/justifiedGallery.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
 <% } %>
 
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/<%= get_config('article.highlight', 'atom-one-light') %>.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/<%= get_config('article.highlight', 'atom-one-light') %>.min.css">
 
 <%- css('css/style') %>
 
