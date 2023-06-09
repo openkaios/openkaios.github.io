@@ -26,7 +26,7 @@ tags:
 
 连上手机，在手机拨号盘输入 `*#*#33284#*#*` 后，打开 `ADBDriverInstaller.exe` 发现设备后点击 `Install` 即可安装驱动。
 
-从 [Waterfox 官网](https://www.waterfox.net/download/) 找到 Waterfox Classic，选择你所运行的平台下载安装，截至目前的版本（2021.09）该浏览器的 WebIDE 均保留且可以正常使用，与 Firefox 52.9/59.0 和 Palemoon 28.6.1 相比取消了 WebIDE 难以使用的代码编辑器，同时 ADB Helper 可以正常使用，你可以选择你所喜欢的代码编辑器甚至专业 IDE 来编写应用（如 Visual Studio Code、WebStorm、HBuilder X 等）。
+从 [Waterfox 官网](https://classic.waterfox.net/) 找到 Waterfox Classic，选择你所运行的平台下载安装，截至目前的版本（2021.09）该浏览器的 WebIDE 均保留且可以正常使用，与 Firefox 52.9/59.0 和 Palemoon 28.6.1 相比取消了 WebIDE 难以使用的代码编辑器，同时 ADB Helper 可以正常使用，你可以选择你所喜欢的代码编辑器甚至专业 IDE 来编写应用（如 Visual Studio Code、WebStorm、HBuilder X 等）。
 
 ![](https://liaronce.magecorn.com/img/Snipaste_2021-09-30_22-03-04.png)
 
